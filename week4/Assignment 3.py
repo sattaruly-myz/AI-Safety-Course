@@ -1,3 +1,4 @@
+from inspect_ai.scorer import model_graded_qa
 SCORER_MODEL = "ollama/qwen2.5:7b"
 
 GRADING_INSTRUCTIONS = """You are a strict math grader. 
