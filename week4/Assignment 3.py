@@ -1,4 +1,4 @@
-SCORER_MODEL = MODEL
+SCORER_MODEL = "ollama/qwen2.5:7b"
 
 GRADING_INSTRUCTIONS = """You are a strict math grader. 
 Compare the model's answer to the target answer. 
