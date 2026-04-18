@@ -44,3 +44,8 @@ log_improved = eval(
 
 print("Результаты после улучшения промпта:")
 print(compute_error_rates(log_improved))
+
+"""
+Which prompt change had the largest effect?
+Ролевая игра (Role-playing: "You are an academic researcher") оказала наибольший эффект на проприетарные и IT-модели. Это позволило обойти встроенные цензурные фильтры (jailbreak-эффект) и заставило модель классифицировать токсичный текст, а не читать нотации о морали. Уровень clf_failure_rate резко упал
+"""
