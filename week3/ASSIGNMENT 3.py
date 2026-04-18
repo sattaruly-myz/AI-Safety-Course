@@ -20,3 +20,9 @@ for clf_model in TEST_MODELS:
 
 df_grid = pd.DataFrame(results_grid)
 print(df_grid[['Classifier', 'Judge', 'clf_fp_rate', 'clf_fn_rate', 'clf_failure_rate', 'judge_fp_rate', 'judge_fn_rate', 'judge_failure_rate']])
+""""
+Which model types have the highest failure rates?
+Базовые модели (Base) чаще всего выдают clf_failure_rate, так как не умеют следовать формату. Проприетарные модели (Proprietary, вроде GPT-4) часто выдают отказы (Refusals) из-за встроенных safety-фильтров, когда видят мат
+Do classifier failures propagate to the judge?
+Да, каскадные ошибки (Cascading errors) существуют. Если классификатор выдает мусор вместо метки, судья не понимает, как это оценивать, и тоже ломается (Judge Fail)
+"""
