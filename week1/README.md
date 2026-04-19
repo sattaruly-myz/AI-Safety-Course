@@ -1,3 +1,7 @@
+# Answer to the questions
+
+---
+
 ### What do the numbers show? (just the facts)
 
 Цифры показывают явную разницу в Accuracy в зависимости от структуры промпта.
