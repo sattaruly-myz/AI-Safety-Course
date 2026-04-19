@@ -2,6 +2,7 @@ from inspect_ai import Task, task, eval
 from inspect_ai.dataset import Sample
 from inspect_ai.scorer import match
 from inspect_ai.solver import generate
+from inspect_ai.scorer import includes
 
 @task
 def hello_model():
@@ -25,11 +26,7 @@ def hello_model():
             )
         ],
         solver=[generate()],
-        scorer=match(
-            location="end",
-            ignore_case=True,
-            numeric=False
-        )
+        scorer=includes(ignore_case=True)
     )
 
 if __name__ == "__main__":
