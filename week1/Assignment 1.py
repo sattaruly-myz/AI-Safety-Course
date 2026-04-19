@@ -33,5 +33,4 @@ if __name__ == "__main__":
     eval(
         hello_model,
         model="ollama/qwen2.5:7b", 
-        # limit=1 # Раскомментируй для теста только на 1 примере
     )
