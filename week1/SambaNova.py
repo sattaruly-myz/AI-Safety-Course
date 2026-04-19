@@ -6,6 +6,7 @@ from inspect_ai.scorer import includes
 from inspect_ai.solver import generate
 
 load_dotenv()
+print(f"Ключ найден: {os.getenv('SAMBANOVA_API_KEY')[:5]}...")
 
 @task
 def hello_model():
@@ -41,5 +42,5 @@ if __name__ == "__main__":
         print("Запускаем DeepSeek-V3 через SambaNova...")
         eval(
             hello_model,
-            model="sambanova/DeepSeek-V3", # Облачная модель
+            model="sambanova/Meta-Llama-3.3-70B-Instruct", 
         )
