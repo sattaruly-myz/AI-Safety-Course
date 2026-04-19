@@ -26,7 +26,11 @@ def hello_model():
             )
         ],
         solver=[generate()],
-        scorer=includes(ignore_case=True)
+        scorer=match(
+            location="end",
+            ignore_case=True,
+            numeric=False
+        )
     )
 
 if __name__ == "__main__":
